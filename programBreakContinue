@@ -1,0 +1,54 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+struct animals {
+    string name;
+    string ability;
+    int leg;
+};
+
+int main() {
+    animals animal[] = {
+        {
+            "cat", "climb", 4,
+        },
+        {
+            "dog", "bark", 4,
+        },
+        {
+            "bird", "fly", 2,
+        },
+        {
+            "bee", "fly", 6,
+        },
+        {
+            "butterfly", "fly", 6,
+        },
+        {
+            "fish", "swim", 0,
+        },
+        {
+            "whale", "swim", 0,
+        },
+        {
+            "dolphin", "swim", 0,
+        },
+        {
+            "monkey", "climb", 4,
+        },
+        {
+            "dragonfly", "fly", 6,
+        }
+    };
+    
+
+    cout << "what animal has 4 legs?\n\n";
+    for (int i=0; i<10; i++) {
+        if (animal[i].leg == 4) {
+            cout << animal[i].name << endl;
+        }
+    }
+
+    return 0;
+}
