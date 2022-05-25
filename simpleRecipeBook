@@ -11,8 +11,8 @@ struct recipes{
 void header() {														// header function
 	cout << "=====================================\n";
 	cout << "|[                                 ]|\n";
-	cout << "|[           RECIPE BOOK           ]|\n";
-	cout << "|[       (3 ingredients only)      ]|\n";
+	cout << "|[            RECIPE BOOK          ]|\n";
+	cout << "|[          (3 ingredients)        ]|\n";
 	cout << "|[                                 ]|\n";
 	cout << "=====================================\n\n";
 }
