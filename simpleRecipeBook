@@ -3,7 +3,7 @@
 #include <stdlib.h>
 using namespace std;
 
-struct recipes{
+struct recipes{														// the struct is here
 	string name;
 	string goods[3];
 };
