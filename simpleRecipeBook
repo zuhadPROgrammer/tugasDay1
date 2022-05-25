@@ -8,7 +8,7 @@ struct recipes{
 	string goods[3];
 };
 
-void header() {
+void header() {														// header function
 	cout << "=====================================\n";
 	cout << "|[                                 ]|\n";
 	cout << "|[           RECIPE BOOK           ]|\n";
@@ -19,8 +19,8 @@ void header() {
 
 int main () {
 	int totalRecipes = 11;												// updated manually
-	recipes food[] {													// call recipe struct & declare array named food
-		{"pancake", "egg", "flour", "butter"},
+	recipes food[] {												// call recipe struct & declare array named food
+		{"cupcake", "egg", "flour", "butter"},
 		{"bread", "egg", "flour", "yeast"},
 		{"fried rice","egg", "rice", "garlic"},
 		{"brownies", "egg", "flour", "butter"},
@@ -33,16 +33,16 @@ int main () {
 		{"cloud bread", "tartar", "cream"}
 	};
 
-	header();															// print header
+	header();													// print header
 
 	string userHas;
 	string cookable[totalRecipes];
 	bool onTheRecipeBook=false;											// to check the user input w ingredients in the recipe
 
 	cout << "what do you have at home? ";
-	cin >> userHas;														// user input what igredient they have
+	cin >> userHas;													// user input what igredient they have
 
-	for (int i=0; i<totalRecipes; i++) {								// put the food in array named cookable
+	for (int i=0; i<totalRecipes; i++) {										// put the food in array named cookable
 		for (int j=0; j<3; j++) {
 			if (userHas == food[i].goods[j]) {
 				cookable[i] = food[i].name;
@@ -51,7 +51,7 @@ int main () {
 		}
 	}
 
-	if (onTheRecipeBook == false) {										// will be printed if user input has no matches w our ingredient
+	if (onTheRecipeBook == false) {											// will be printed if user input has no matches w our ingredient
 		cout << "\nsorry, we don't have any recipe using " << userHas << " yet :(\n";
 		cout << "will be updated soon!\n";
 		exit(0);
@@ -61,14 +61,14 @@ int main () {
 	cout << "you can cook: \n";
 	for (int i=0; i<totalRecipes; i++) {
 		if (cookable[i]=="") {
-			continue;													// the continue is here!
+			continue;											// the continue is here!
 		}
-		cout << "[" << i+1 << "] " << cookable[i] << "\n";				// print the cookable array and its index + by 1
+		cout << "[" << i+1 << "] " << cookable[i] << "\n";							// print the cookable array and its index + by 1
 	}
 
 	int cookableNum;
 	cout << "\ntype the code to see the full recipe: ";
-	cin >> cookableNum;													// user input the food recipe to be displayed
+	cin >> cookableNum;												// user input the food recipe to be displayed
 	cookableNum--;
 
 	cout << "\n" << food[cookableNum].name << " ingredients: \n";
@@ -77,7 +77,7 @@ int main () {
 			for (int j=0; j<3; j++) {									// print the recipe of selected food
 				cout << "- " << food[cookableNum].goods[j] << "\n";
 			}
-			break;														// the break is here!
+			break;												// the break is here!
 		}
 	}
 
