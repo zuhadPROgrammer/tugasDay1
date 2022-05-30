@@ -64,16 +64,16 @@ int main() {
 
 	header();
 	int charPositionY, charPositionX;
-	charPositionX=9;														      	// spawn position
+	charPositionX=9;									// spawn position
 	charPositionY=2;
 	cout << "you spawn at (" << (charPositionX+1) << "," << (charPositionY+1) << ") coordinate";
 
 	int userMove;
 	do {
 		cout << "\ntap any button to move: ";
-		userMove = (getch());												  	// input user's move w, a, s, or d
+		userMove = (getch());								// input user's move w, a, s, or d
 
-		if (userMove==119 && map[charPositionY-1][charPositionX]<4) {			    // move up
+		if (userMove==119 && map[charPositionY-1][charPositionX]<4) {			// move up
 			charPositionY-=1;
 		}
 		else if (userMove==115 && map[charPositionY+1][charPositionX]<4) {		// move down
@@ -88,7 +88,7 @@ int main() {
 
 		int charCoordinate=map[charPositionY][charPositionX];
 		cout << "\n";
-		for (int i=0; i<lebarPeta; i++) {								                  		//render grafik
+		for (int i=0; i<lebarPeta; i++) {							//render grafik
 			for (int j=0; j<panjangPeta; j++) {
 				if (charPositionX==j && charPositionY==i && charCoordinate<4) {
 					cout << "& ";
@@ -112,7 +112,7 @@ int main() {
 		}
 
 		if (charCoordinate==2 || charCoordinate==3) {   
-		int probPokemon;							                  	    // generate random number
+		int probPokemon;									// generate random number
 		srand (time(NULL));
 		probPokemon = rand() % 10;
 
@@ -121,7 +121,7 @@ int main() {
 			cout << "\n\nyou found pokemon!\n";
 			cout << "what will you do?\n1) fight\n2) run\n";
 			cout << "decision: ";
-			fightOrRun = getch();							              		// get input from user without enter
+			fightOrRun = getch();								// get input from user without enter
 
 			if (fightOrRun=='1') {
 				cout << endl;
