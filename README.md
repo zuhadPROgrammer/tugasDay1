@@ -36,7 +36,9 @@ Review singkat:
   5) fight and win the battle to gain exp
 
 - game demo  
-  /demo_pokemon_game.mp4
+https://user-images.githubusercontent.com/88933981/171459480-2ff282b3-8302-4d73-b9e7-49b070801461.mp4
+
+
 
 
   
